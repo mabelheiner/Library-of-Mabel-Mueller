@@ -1,57 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
-body{
-    /* always use regular 400 */
-    font-family: 'Open Sans', sans-serif;
+
+
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+.header_img, .footer_img{
+    float: left;
+    height: 120px;
+}
+
+.social_logo{
+    float: right;
+    height: 35px;
+}
+
+header, footer{
+    background-color: white;
+    padding: 1em;
+    color: white;
+    text-align: left;
+    color: black;
 }
 
 header{
+    margin-bottom: 1em;
+}
+
+nav {
+    margin: auto;
+    text-align: center;
+}
+
+nav ul li:hover{
+    background-color: white;
+}
+
+nav ul {
     display: flex;
-    align-items: center;
-    background-color: darkslategrey;
+    flex-direction: row;
+    list-style: none;  
+}
+  
+nav ul li {
+    min-width: 20%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: .5px solid black;
+    margin-bottom: 1em;
+    background-color: white;
+    color: black;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
+
+footer {
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
     color: white;
-    border: 2px black solid;
-    margin-top: 1em;
-    text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
 }
 
-header img{
-    margin: 1rem;
-    border: 1px solid rgb(0, 0, 0);
-    padding: 5px;
-    box-shadow: 2px 2px black;
-}
-
-header h1{
+.part2{
+    display: grid;
     text-align: center;
+    grid-area: part2;
 }
 
-header div:nth-child(2){
-    width: 100%
-}
-
-#content{
-    margin: 0 auto;
-    width: 800px;
-}
-
-img {
-    height: 150px;
-}
-
-main h2{
-    text-align: center;
-}
-
-footer{
-    align-items: center;
-    background-color: darkslategrey;
+/*Hamburger Menu Stuff*/
+#hamburger-menu {
+    background-color: white;
+    font-size: 2rem;
     color: white;
-    border: 2px black solid;
+    border: 1px solid white;
+    float: right;
+  }
+  
+  #navbar{
+    display: none;
+  }
+  
+  #menu-open{
+    display: none;
+  }
+  
+  #menu-close{
+    display: inline;
+  }
+  
+  #navbar.menu-active{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #menu-open.menu-active{
+    display: inline;
+  }
+  
+  #menu-close.menu-active{
+    display: none;
+  }
+
+  /*hamburger menu*/
+#hamburger-menu {
+    display: none;
+  }
+  
+#navbar{
+    display: flex;
+    flex-direction: row;
+  }
+
+/*temples*/
+#books {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+div {
+    margin: 10px;
     text-align: center;
-    padding: 1em;
+}
+
+.book_img{
+  height: 150px;
+}
+
+ #books {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+} 
+
+
+book{
+  border: 1px solid black;
+  padding: 1em;
+  padding-top: 0em;
+}
+
+.book_menu{
+  margin-left: 5em;
+}
+
+#star{
+  float: right;
+  background: none;
+  border-style: none;
+  font-size: 2em;
+}
+
+#star_filled{
+  float: right;
+  background: none;
+  border-style: none;
+  font-size: 2em;
+  color: gold;
 }
